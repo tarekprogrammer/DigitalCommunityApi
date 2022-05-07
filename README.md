@@ -217,3 +217,124 @@ This is the api documentation of Digital Community BD project.
 | Parameter | Type     | Description                              |
 | :-------- | :------- | :--------------------------------------- |
 | `type`    | `string` | Types are {`clinic, hospital, pharmacy`} |
+
+### Doctor:
+
+#### Add a doctor
+
+```
+  POST /api/doctor/add
+```
+
+| Parameter    | Type     | Description             |
+| :----------- | :------- | :---------------------- |
+| `name`       | `string` |                         |
+| `specialist` | `string` |                         |
+| `degree`     | `String` |                         |
+| `phone`      | `String` |                         |
+| `photo`      | `file`   | `form-data` field photo |
+
+#### Get all doctor
+
+```
+  GET /api/doctor/get
+```
+
+#### Assign a doctor
+
+```
+  POST /api/healthcare/assigndoctor
+```
+
+| Parameter        | Type     | Description                                           |
+| :--------------- | :------- | :---------------------------------------------------- |
+| `health_care_id` | `int`    |                                                       |
+| `doctor_id`      | `int`    |                                                       |
+| `schedule`       | `string` | 4:30 PM to 9:30 PM Friday , 4:30 PM to 9:30 PM Sunday |
+
+### Education
+
+#### Add an education institute
+
+```
+  POST /api/educational/add
+```
+
+| Parameter    | Type     | Description                                                          |
+| :----------- | :------- | :------------------------------------------------------------------- |
+| `name`       | `string` |                                                                      |
+| `type`       | `string` | types are {`Primary School, High School, Collage, Madrasha, Others`} |
+| `village_id` | `int`    |                                                                      |
+| `photo`      | `file`   |                                                                      |
+| `details`    | `String` |                                                                      |
+
+#### Get all route
+
+```
+  GET /api/educational/getbytype/{type}
+```
+
+| Parameter | Type     | Description                                                          |
+| :-------- | :------- | :------------------------------------------------------------------- |
+| `type`    | `string` | types are {`Primary School, High School, Collage, Madrasha, Others`} |
+
+### Emergency
+
+#### Add a emergency
+
+```
+  POST /api/emergency/add
+```
+
+| Parameter | Type     | Description          |
+| :-------- | :------- | :------------------- |
+| `type`    | `string` | write emergency type |
+| `photo`   | `file`   |                      |
+| `phone`   | `string` |                      |
+| `address` | `string` |                      |
+
+#### Get all emergency
+
+```
+  GET /api/emergency/get
+```
+
+### Career
+
+#### Add a career
+
+```
+  POST /api/career/add
+```
+
+| Parameter | Type     | Description             |
+| :-------- | :------- | :---------------------- |
+| `name`    | `String` |                         |
+| `url`     | `string` |                         |
+| `photo`   | `file`   | `form-data` field photo |
+
+#### Get all career
+
+```
+  GET /api/career/get
+```
+
+### Newspaper
+
+#### Add a newspaper
+
+```
+  POST /api/news/add
+```
+
+| Parameter | Type     | Description             |
+| :-------- | :------- | :---------------------- |
+| `name`    | `String` |                         |
+| `url`     | `string` |                         |
+| `photo`   | `file`   | `form-data` field photo |
+
+#### Get all news
+
+```
+  GET /api/news/get
+```
