@@ -12,6 +12,7 @@ var educational = require('./routes/education')
 var emergency = require('./routes/emergency')
 var career = require('./routes/career')
 var news = require('./routes/news')
+var char_mem = require('./routes/char_mem')
 
 
 app.use("/village",village);
@@ -25,6 +26,7 @@ app.use('/educational',educational)
 app.use('/emergency',emergency)
 app.use('/career',career)
 app.use('/news',news)
+app.use('/chairmanOrMember',char_mem)
 
 
 
